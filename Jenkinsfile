@@ -23,15 +23,5 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        stage('Build Image') { 
-            steps {
-                docker.build("norlo/simple-java-maven-app:${env.BUILD_NUMBER}")
-            }
-        }
-        stage('Deliver') { 
-            steps {
-                sh 'echo "Hallo"' 
-            }
-        }
     }
 }
