@@ -31,7 +31,9 @@ pipeline {
                 }
             }
             steps {
-                docker.build("norlo/simple-java-maven-app")
+                script {
+                    docker.build("norlo/simple-java-maven-app")
+                }
             }
 
         }
